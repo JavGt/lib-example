@@ -18,6 +18,14 @@
     "build": "npm run build:types && npm run build:dist",
     "prepublishOnly": "npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JavGt/lib-example"
+  },
+  "bugs": {
+    "url": "https://github.com/JavGt/lib-example/issues"
+  },
+  "homepage": "https://github.com/JavGt/lib-example#readme",
   "files": [
     "dist"
   ],
@@ -34,6 +42,7 @@
     "@types/react": "^18.2.47",
     "esbuild": "^0.19.11",
     "react": "^18.2.0",
+    "release-it": "^17.0.1",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
@@ -42,5 +51,14 @@
   "dependencies": {
     "styled-components": "^6.1.8"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "release-it": {
+    "git": {
+      "commitMessage": "release(reader-ui): v${version}",
+      "tagName": "reader-ui/v${version}"
+    },
+    "npm": {
+      "publish": true
+    }
+  }
 }
