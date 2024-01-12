@@ -1,0 +1,46 @@
+{
+  "name": "lib-example",
+  "version": "1.0.0",
+  "description": "",
+  "private": false,
+  "main": "dist/node/index.js",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "contributors": [
+    {
+      "name": "Javier Gutiérrez",
+      "email": "javier.bz.gt@gmail.com"
+    }
+  ],
+  "scripts": {
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:dist": "node compile.js",
+    "build": "npm run build:types && npm run build:dist",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.47",
+    "esbuild": "^0.19.11",
+    "react": "^18.2.0",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "dependencies": {
+    "styled-components": "^6.1.8"
+  },
+  "sideEffects": false
+}
